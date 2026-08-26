@@ -1,15 +1,20 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Simran Gohel | Data & Tech Portfolio</title>
 
     <meta name="description"
-        content="Simran Gohel's professional portfolio showcasing projects in Python, SQL, Excel, Data Analytics and Web Development.">
+        content="Simran Gohel - Data & Technology Portfolio showcasing Python, SQL, Excel, Data Analytics and practical projects.">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -29,29 +34,38 @@
             color: inherit;
         }
 
-        /* NAVBAR */
+
+        /* =========================
+           NAVBAR
+        ========================= */
 
         nav {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(11, 17, 32, 0.92);
+
+            background: rgba(11, 17, 32, 0.94);
+
             backdrop-filter: blur(12px);
+
             border-bottom: 1px solid #1f2937;
         }
 
         .nav-container {
             max-width: 1100px;
             margin: auto;
+
             padding: 18px 25px;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 25px;
             font-weight: bold;
             color: #38bdf8;
         }
@@ -71,17 +85,28 @@
             color: #38bdf8;
         }
 
-        /* HERO */
+
+        /* =========================
+           HERO / HOME
+        ========================= */
 
         .hero {
             min-height: 100vh;
+
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+
             text-align: center;
+
             padding: 120px 20px 80px;
+
             background:
-                radial-gradient(circle at top, #172554 0%, #0b1120 45%);
+                radial-gradient(
+                    circle at top,
+                    #172554 0%,
+                    #0b1120 50%
+                );
         }
 
         .hero-content {
@@ -107,24 +132,38 @@
         .hero p {
             max-width: 700px;
             margin: auto;
+
             color: #94a3b8;
+
             font-size: 17px;
         }
 
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
         .buttons {
             margin-top: 30px;
+
             display: flex;
             justify-content: center;
+
             gap: 15px;
+
             flex-wrap: wrap;
         }
 
         .btn {
             padding: 13px 25px;
+
             border-radius: 8px;
+
             font-weight: bold;
-            transition: 0.3s;
+
             display: inline-block;
+
+            transition: 0.3s;
         }
 
         .primary {
@@ -134,32 +173,46 @@
 
         .primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.25);
+
+            box-shadow:
+                0 10px 25px
+                rgba(56, 189, 248, 0.25);
         }
 
         .secondary {
             border: 1px solid #334155;
+
             color: #e2e8f0;
         }
 
         .secondary:hover {
             border-color: #38bdf8;
+
             color: #38bdf8;
+
             transform: translateY(-3px);
         }
 
-        /* SECTIONS */
+
+        /* =========================
+           SECTIONS
+        ========================= */
 
         section {
             max-width: 1100px;
+
             margin: auto;
+
             padding: 90px 25px;
         }
 
         .section-title {
             text-align: center;
+
             font-size: 36px;
+
             margin-bottom: 15px;
+
             color: #f8fafc;
         }
 
@@ -169,49 +222,82 @@
 
         .section-subtitle {
             text-align: center;
+
             color: #94a3b8;
+
             margin-bottom: 45px;
         }
 
-        /* ABOUT */
+
+        /* =========================
+           ABOUT
+        ========================= */
 
         .about-box {
             background: #111827;
+
             border: 1px solid #1f2937;
+
             border-radius: 15px;
+
             padding: 35px;
+
             text-align: center;
+
+            transition: 0.3s;
+        }
+
+        .about-box:hover {
+            border-color: #38bdf8;
         }
 
         .about-box p {
             color: #cbd5e1;
+
             font-size: 17px;
         }
 
-        /* SKILLS */
+
+        /* =========================
+           SKILLS
+        ========================= */
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+
             gap: 20px;
         }
 
         .skill-card {
             background: #111827;
+
             border: 1px solid #1f2937;
+
             border-radius: 12px;
+
             padding: 25px;
+
             text-align: center;
+
             transition: 0.3s;
         }
 
         .skill-card:hover {
             transform: translateY(-7px);
+
             border-color: #38bdf8;
+
+            box-shadow:
+                0 10px 25px
+                rgba(0, 0, 0, 0.2);
         }
 
         .skill-card h3 {
             color: #38bdf8;
+
             margin-bottom: 10px;
         }
 
@@ -219,59 +305,90 @@
             color: #94a3b8;
         }
 
-        /* PROJECTS */
+
+        /* =========================
+           PROJECTS
+        ========================= */
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
             gap: 25px;
         }
 
         .project-card {
             background: #111827;
+
             border: 1px solid #1f2937;
+
             border-radius: 15px;
+
             padding: 28px;
+
             transition: 0.3s;
+
             display: flex;
+
             flex-direction: column;
         }
 
         .project-card:hover {
             transform: translateY(-8px);
+
             border-color: #38bdf8;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+
+            box-shadow:
+                0 15px 35px
+                rgba(0, 0, 0, 0.25);
         }
 
         .project-card h3 {
             color: #f8fafc;
+
             margin-bottom: 12px;
+
             font-size: 21px;
         }
 
         .project-card p {
             color: #94a3b8;
+
             margin-bottom: 20px;
+
             flex-grow: 1;
         }
 
+
+        /* PROJECT TAGS */
+
         .tags {
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 8px;
+
             margin-bottom: 20px;
         }
 
         .tag {
             background: #172033;
+
             color: #38bdf8;
+
             padding: 5px 10px;
+
             border-radius: 20px;
+
             font-size: 13px;
         }
 
         .project-link {
             color: #38bdf8;
+
             font-weight: bold;
         }
 
@@ -279,69 +396,89 @@
             text-decoration: underline;
         }
 
-        /* GITHUB */
 
-        .github-box {
-            background: linear-gradient(135deg, #111827, #172554);
-            border: 1px solid #1f2937;
-            border-radius: 15px;
-            padding: 45px 25px;
-            text-align: center;
-        }
-
-        .github-box h3 {
-            font-size: 28px;
-            margin-bottom: 12px;
-        }
-
-        .github-box p {
-            color: #94a3b8;
-            margin-bottom: 25px;
-        }
-
-        /* CONTACT */
+        /* =========================
+           CONTACT
+        ========================= */
 
         .contact-box {
-            text-align: center;
             background: #111827;
+
             border: 1px solid #1f2937;
+
             border-radius: 15px;
-            padding: 40px 25px;
+
+            padding: 45px 25px;
+
+            text-align: center;
+
+            transition: 0.3s;
+        }
+
+        .contact-box:hover {
+            border-color: #38bdf8;
+        }
+
+        .contact-box h3 {
+            font-size: 28px;
+
+            color: #f8fafc;
+
+            margin-bottom: 12px;
         }
 
         .contact-box p {
             color: #94a3b8;
-            margin-bottom: 20px;
+
+            margin-bottom: 25px;
         }
 
         .contact-links {
             display: flex;
+
             justify-content: center;
+
             gap: 15px;
+
             flex-wrap: wrap;
         }
 
-        /* FOOTER */
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             border-top: 1px solid #1f2937;
+
             text-align: center;
+
             padding: 25px;
+
             color: #64748b;
         }
 
-        /* RESPONSIVE */
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
 
         @media (max-width: 700px) {
 
             .nav-container {
                 flex-direction: column;
+
                 gap: 12px;
             }
 
             .nav-links {
                 gap: 15px;
+
                 font-size: 14px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
             }
 
             .hero h1 {
@@ -355,59 +492,99 @@
             .section-title {
                 font-size: 30px;
             }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- NAVBAR -->
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
 
     <nav>
+
         <div class="nav-container">
 
-            <div class="logo">Simran.</div>
+            <div class="logo">
+                Simran.
+            </div>
 
             <ul class="nav-links">
-                
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#github">GitHub</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
             </ul>
 
         </div>
+
     </nav>
 
 
-    <!-- HERO -->
+
+    <!-- =========================
+         HOME
+    ========================= -->
 
     <header class="hero" id="home">
 
         <div class="hero-content">
 
-            <h1>Hi, I'm <span>Simran Gohel</span></h1>
+            <h1>
+                Hi, I'm
+                <span>Simran Gohel</span>
+            </h1>
 
-            <h2>Data & Technology Enthusiast</h2>
+            <h2>
+                Data & Technology Enthusiast
+            </h2>
 
             <p>
-                I build practical projects using Python, SQL, Excel and
-                modern web technologies while continuously improving my
-                problem-solving and data analysis skills.
+                I build practical projects using Python, SQL,
+                Excel and data analytics while continuously
+                improving my technical and problem-solving skills.
             </p>
 
             <div class="buttons">
 
-                <a href="#projects" class="btn primary">
+                <a
+                    href="#projects"
+                    class="btn primary">
+
                     View My Projects
+
                 </a>
 
-                <a href="https://github.com/simrangohel70-lab"
-                   target="_blank"
-                   class="btn secondary">
+                <a
+                    href="https://github.com/simrangohel70-lab"
+                    target="_blank"
+                    class="btn secondary">
+
                     GitHub Profile
+
                 </a>
 
             </div>
@@ -417,357 +594,496 @@
     </header>
 
 
-   <!-- ABOUT -->
 
-<section id="about">
+    <!-- =========================
+         ABOUT
+    ========================= -->
 
-    <h2 class="section-title">
-        About <span>Me</span>
-    </h2>
+    <section id="about">
 
-    <p class="section-subtitle">
-        Turning data and ideas into practical solutions.
-    </p>
+        <h2 class="section-title">
 
-    <div class="about-box">
+            About
+            <span>Me</span>
 
-        <p>
-            I'm a technology learner with a strong interest in
-            <strong>Data Analytics, SQL, Python and Excel</strong>.
-            I enjoy working with data, solving problems and building
-            practical projects that turn concepts into useful solutions.
+        </h2>
+
+        <p class="section-subtitle">
+
+            Turning data and ideas into practical solutions.
+
         </p>
 
-        <br>
+        <div class="about-box">
 
-        <p>
-            My projects include database management systems, Excel
-            analytics, retail data analysis and Python-based data
-            projects. I am continuously learning new technologies and
-            improving my technical and problem-solving skills.
-        </p>
+            <p>
 
-    </div>
+                I'm a technology learner with a strong interest
+                in <strong>Data Analytics, SQL, Python and Excel</strong>.
+                I enjoy working with data, solving problems and
+                building practical projects that turn concepts
+                into useful solutions.
 
-</section>
+            </p>
 
-    <!-- SKILLS -->
+            <br>
+
+            <p>
+
+                My projects include database management systems,
+                Excel analytics, retail data analysis and
+                Python-based data projects. I am continuously
+                learning new technologies and improving my
+                technical and problem-solving skills.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SKILLS
+    ========================= -->
 
     <section id="skills">
 
         <h2 class="section-title">
-            My <span>Skills</span>
+
+            My
+            <span>Skills</span>
+
         </h2>
 
         <p class="section-subtitle">
-            Technologies and tools I'm working with
+
+            Technologies and tools I'm working with.
+
         </p>
 
         <div class="skills-grid">
 
-            <div class="skill-card">
-                <h3>Python</h3>
-                <p>Programming, OOP, Pandas and Data Handling</p>
-            </div>
 
             <div class="skill-card">
-                <h3>SQL</h3>
-                <p>PostgreSQL, Queries, Joins and Database Management</p>
+
+                <h3>🐍 Python</h3>
+
+                <p>
+                    Programming, OOP, Pandas
+                    and Data Handling
+                </p>
+
             </div>
 
-            <div class="skill-card">
-                <h3>Excel</h3>
-                <p>Functions, Lookups, Data Analysis and Dashboards</p>
-            </div>
 
             <div class="skill-card">
-                <h3>Data Analytics</h3>
-                <p>Data Cleaning, Analysis and Visualization</p>
+
+                <h3>🗄️ SQL</h3>
+
+                <p>
+                    PostgreSQL, Queries,
+                    Joins and Databases
+                </p>
+
             </div>
 
-            <div class="skill-card">
-                <h3>HTML & CSS</h3>
-                <p>Responsive and modern web page development</p>
-            </div>
 
             <div class="skill-card">
-                <h3>Git & GitHub</h3>
-                <p>Version control and project portfolio management</p>
+
+                <h3>📊 Excel</h3>
+
+                <p>
+                    Functions, Lookups,
+                    Data Analysis and Dashboards
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>📈 Data Analytics</h3>
+
+                <p>
+                    Data Cleaning, Analysis
+                    and Visualization
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>🌐 HTML & CSS</h3>
+
+                <p>
+                    Responsive and modern
+                    web development
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>💻 Git & GitHub</h3>
+
+                <p>
+                    Version control and
+                    project management
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PROJECTS
+    ========================= -->
+
+    <section id="projects">
+
+        <h2 class="section-title">
+
+            Featured
+            <span>Projects</span>
+
+        </h2>
+
+        <p class="section-subtitle">
+
+            A collection of my practical projects
+            in data, databases, Excel and analytics.
+
+        </p>
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card">
+
+                <h3>
+                    🔎 Data Digger
+                </h3>
+
+                <p>
+
+                    A practical data project focused on exploring,
+                    transforming and analyzing structured data
+                    using SQL and database concepts.
+
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">SQL</span>
+
+                    <span class="tag">PostgreSQL</span>
+
+                    <span class="tag">Data Analysis</span>
+
+                </div>
+
+                <a
+                    href="https://github.com/simrangohel70-lab/Data-Digger"
+                    target="_blank"
+                    class="project-link">
+
+                    View Project →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <h3>
+                    📊 Fundamental Booster — Excel
+                </h3>
+
+                <p>
+
+                    A hands-on Excel project covering formulas,
+                    functions, conditional formatting, lookups,
+                    data analysis and spreadsheet techniques.
+
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">Excel</span>
+
+                    <span class="tag">Data Analysis</span>
+
+                    <span class="tag">Functions</span>
+
+                </div>
+
+                <a
+                    href="https://github.com/simrangohel70-lab/Fundamental-Booster-excel"
+                    target="_blank"
+                    class="project-link">
+
+                    View Project →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project-card">
+
+                <h3>
+                    📚 Library Management System
+                </h3>
+
+                <p>
+
+                    A database management system designed to
+                    organize authors, books and library records
+                    using relational database concepts.
+
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">PostgreSQL</span>
+
+                    <span class="tag">SQL</span>
+
+                    <span class="tag">Database</span>
+
+                </div>
+
+                <a
+                    href="https://github.com/simrangohel70-lab/library-management-system"
+                    target="_blank"
+                    class="project-link">
+
+                    View Project →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- PROJECT 4 -->
+
+            <div class="project-card">
+
+                <h3>
+                    🛒 Retail Sale Data Analyzer
+                </h3>
+
+                <p>
+
+                    A data analysis project focused on examining
+                    retail sales data and extracting useful
+                    insights through practical data analysis
+                    techniques.
+
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">Data Analysis</span>
+
+                    <span class="tag">SQL</span>
+
+                    <span class="tag">Analytics</span>
+
+                </div>
+
+                <a
+                    href="https://github.com/simrangohel70-lab/Retail-sale-data-analyzer"
+                    target="_blank"
+                    class="project-link">
+
+                    View Project →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- PROJECT 5 -->
+
+            <div class="project-card">
+
+                <h3>
+                    🚢 Titanic Survival Analysis
+                </h3>
+
+                <p>
+
+                    A data analysis project using the Titanic
+                    dataset to explore passenger information,
+                    survival patterns and meaningful insights.
+
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">Python</span>
+
+                    <span class="tag">Pandas</span>
+
+                    <span class="tag">Data Visualization</span>
+
+                </div>
+
+                <a
+                    href="https://github.com/simrangohel70-lab/Titanic-survival-"
+                    target="_blank"
+                    class="project-link">
+
+                    View Project →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- PROJECT 6 -->
+
+            <div class="project-card">
+
+                <h3>
+                    🎓 University Course Management System
+                </h3>
+
+                <p>
+
+                    A relational database project for managing
+                    university courses, students and academic
+                    records using structured SQL concepts.
+
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">PostgreSQL</span>
+
+                    <span class="tag">SQL</span>
+
+                    <span class="tag">Database</span>
+
+                </div>
+
+                <a
+                    href="https://github.com/simrangohel70-lab/University-Course-Management-System"
+                    target="_blank"
+                    class="project-link">
+
+                    View Project →
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact">
+
+        <h2 class="section-title">
+
+            Get In
+            <span>Touch</span>
+
+        </h2>
+
+        <p class="section-subtitle">
+
+            Let's connect and explore opportunities together.
+
+        </p>
+
+        <div class="contact-box">
+
+            <h3>
+                Let's Connect 🤝
+            </h3>
+
+            <p>
+
+                Want to explore my work?
+                Visit my GitHub profile and check out
+                my latest projects.
+
+            </p>
+
+            <div class="contact-links">
+
+                <a
+                    href="https://github.com/simrangohel70-lab"
+                    target="_blank"
+                    class="btn primary">
+
+                    GitHub Profile →
+
+                </a>
+
+                <a
+                    href="#home"
+                    class="btn secondary">
+
+                    Back to Top ↑
+
+                </a>
+
             </div>
 
         </div>
 
     </section>
 
-<!-- PROJECTS -->
-
-<section id="projects">
-
-    <h2 class="section-title">
-        Featured <span>Projects</span>
-    </h2>
-
-    <p class="section-subtitle">
-        A collection of my practical projects in data, databases, Excel and analytics.
-    </p>
-
-    <div class="projects-grid">
 
 
-        <!-- PROJECT 1 -->
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
-        <div class="project-card">
-
-            <h3>🔎 Data Digger</h3>
-
-            <p>
-                A practical data project focused on exploring, transforming
-                and analyzing structured data using SQL and database concepts.
-            </p>
-
-            <div class="tags">
-                <span class="tag">SQL</span>
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">Data Analysis</span>
-            </div>
-
-            <a
-                href="https://github.com/simrangohel70-lab/Data-Digger"
-                target="_blank"
-                class="project-link">
-                View Project →
-            </a>
-
-        </div>
-
-
-        <!-- PROJECT 2 -->
-
-        <div class="project-card">
-
-            <h3>📊 Fundamental Booster — Excel</h3>
-
-            <p>
-                A hands-on Excel project covering formulas, functions,
-                conditional formatting, lookups, data analysis and
-                spreadsheet techniques.
-            </p>
-
-            <div class="tags">
-                <span class="tag">Excel</span>
-                <span class="tag">Data Analysis</span>
-                <span class="tag">Functions</span>
-            </div>
-
-            <a
-                href="https://github.com/simrangohel70-lab/Fundamental-Booster-excel"
-                target="_blank"
-                class="project-link">
-                View Project →
-            </a>
-
-        </div>
-
-
-        <!-- PROJECT 3 -->
-
-        <div class="project-card">
-
-            <h3>📚 Library Management System</h3>
-
-            <p>
-                A database management system designed to organize
-                authors, books and library records using relational
-                database concepts.
-            </p>
-
-            <div class="tags">
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">SQL</span>
-                <span class="tag">Database</span>
-            </div>
-
-            <a
-                href="https://github.com/simrangohel70-lab/library-management-system"
-                target="_blank"
-                class="project-link">
-                View Project →
-            </a>
-
-        </div>
-
-
-        <!-- PROJECT 4 -->
-
-        <div class="project-card">
-
-            <h3>🛒 Retail Sale Data Analyzer</h3>
-
-            <p>
-                A data analysis project focused on examining retail sales
-                data and extracting useful insights through practical
-                data analysis techniques.
-            </p>
-
-            <div class="tags">
-                <span class="tag">Data Analysis</span>
-                <span class="tag">SQL</span>
-                <span class="tag">Analytics</span>
-            </div>
-
-            <a
-                href="https://github.com/simrangohel70-lab/Retail-sale-data-analyzer"
-                target="_blank"
-                class="project-link">
-                View Project →
-            </a>
-
-        </div>
-
-
-        <!-- PROJECT 5 -->
-
-        <div class="project-card">
-
-            <h3>🚢 Titanic Survival Analysis</h3>
-
-            <p>
-                A data analysis project using the Titanic dataset to
-                explore passenger information, survival patterns and
-                meaningful insights from historical data.
-            </p>
-
-            <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">Pandas</span>
-                <span class="tag">Data Visualization</span>
-            </div>
-
-            <a
-                href="https://github.com/simrangohel70-lab/Titanic-survival-"
-                target="_blank"
-                class="project-link">
-                View Project →
-            </a>
-
-        </div>
-
-
-        <!-- PROJECT 6 -->
-
-        <div class="project-card">
-
-            <h3>🎓 University Course Management System</h3>
-
-            <p>
-                A relational database project for managing university
-                courses, students and academic records using structured
-                SQL database concepts.
-            </p>
-
-            <div class="tags">
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">SQL</span>
-                <span class="tag">Database</span>
-            </div>
-
-            <a
-                href="https://github.com/simrangohel70-lab/University-Course-Management-System"
-                target="_blank"
-                class="project-link">
-                View Project →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-   <!-- GITHUB -->
-
-<section id="github">
-
-    <h2 class="section-title">
-        GitHub <span>Stats</span>
-    </h2>
-
-    <p class="section-subtitle">
-        Explore my projects, repositories and coding journey.
-    </p>
-
-    <div class="github-box">
-
-        <h3>🚀 Explore My GitHub</h3>
+    <footer>
 
         <p>
-            Check out my repositories and see what I'm building,
-            learning and improving every day.
+
+            © 2026 Simran Gohel.
+            Built with HTML & CSS.
+
         </p>
 
-        <div class="buttons">
-
-            <a
-                href="https://github.com/simrangohel70-lab"
-                target="_blank"
-                class="btn primary">
-                Visit GitHub →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
+    </footer>
 
 
-<!-- CONTACT -->
+</body>
 
-<section id="contact">
-
-    <h2 class="section-title">
-        Get In <span>Touch</span>
-    </h2>
-
-    <p class="section-subtitle">
-        Let's connect and explore opportunities together.
-    </p>
-
-    <div class="contact-box">
-
-        <p>
-            Interested in my work or want to connect?
-            Feel free to visit my GitHub profile and explore my projects.
-        </p>
-
-        <div class="contact-links">
-
-            <a
-                href="https://github.com/simrangohel70-lab"
-                target="_blank"
-                class="btn primary">
-                GitHub Profile →
-            </a>
-
-            <a
-                href="#home"
-                class="btn secondary">
-                Back to Top ↑
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    <p>
-        © 2026 Simran Gohel. Built with HTML & CSS.
-    </p>
-
-</footer>
+</html>
+```
