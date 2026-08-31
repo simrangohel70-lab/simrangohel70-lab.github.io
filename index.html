@@ -1,20 +1,12 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Simran Gohel | Data & Tech Portfolio</title>
-
-    <meta name="description"
-        content="Simran Gohel - Data & Technology Portfolio showcasing Python, SQL, Excel, Data Analytics and practical projects.">
+    <title>Simran Gohel | Data & AI/ML Portfolio</title>
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -23,90 +15,55 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0b1120;
-            color: #e5e7eb;
+            font-family: Arial, sans-serif;
+            background: #f7fdf9;
+            color: #18352a;
             line-height: 1.6;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-
-        /* =========================
-           NAVBAR
-        ========================= */
-
+        /* NAVBAR */
         nav {
-            position: fixed;
+            position: sticky;
             top: 0;
-            left: 0;
-            width: 100%;
             z-index: 1000;
-
-            background: rgba(11, 17, 32, 0.94);
-
-            backdrop-filter: blur(12px);
-
-            border-bottom: 1px solid #1f2937;
-        }
-
-        .nav-container {
-            max-width: 1100px;
-            margin: auto;
-
-            padding: 18px 25px;
-
+            background: white;
+            border-bottom: 1px solid #dceee4;
+            padding: 18px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 25px;
+            font-size: 24px;
             font-weight: bold;
-            color: #38bdf8;
+            color: #16865b;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 25px;
+        nav ul {
             list-style: none;
-        }
-
-        .nav-links a {
-            color: #cbd5e1;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #38bdf8;
-        }
-
-
-        /* =========================
-           HERO / HOME
-        ========================= */
-
-        .hero {
-            min-height: 100vh;
-
             display: flex;
-            justify-content: center;
+            gap: 28px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #18352a;
+            font-weight: 600;
+        }
+
+        nav ul li a:hover {
+            color: #16865b;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
             align-items: center;
-
+            justify-content: center;
             text-align: center;
-
-            padding: 120px 20px 80px;
-
-            background:
-                radial-gradient(
-                    circle at top,
-                    #172554 0%,
-                    #0b1120 50%
-                );
+            padding: 60px 8%;
         }
 
         .hero-content {
@@ -116,368 +73,202 @@
         .hero h1 {
             font-size: 60px;
             margin-bottom: 15px;
-            color: #f8fafc;
         }
 
         .hero h1 span {
-            color: #38bdf8;
+            color: #16865b;
         }
 
         .hero h2 {
-            font-size: 25px;
-            color: #94a3b8;
+            font-size: 28px;
             margin-bottom: 20px;
+            color: #416457;
         }
 
         .hero p {
-            max-width: 700px;
-            margin: auto;
-
-            color: #94a3b8;
-
-            font-size: 17px;
+            font-size: 18px;
+            color: #60776c;
+            margin-bottom: 30px;
         }
 
-
-        /* =========================
-           BUTTONS
-        ========================= */
-
         .buttons {
-            margin-top: 30px;
-
             display: flex;
             justify-content: center;
-
             gap: 15px;
-
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 13px 25px;
-
-            border-radius: 8px;
-
-            font-weight: bold;
-
             display: inline-block;
-
+            padding: 13px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
             transition: 0.3s;
         }
 
         .primary {
-            background: #38bdf8;
-            color: #082f49;
+            background: #16865b;
+            color: white;
         }
 
         .primary:hover {
-            transform: translateY(-3px);
-
-            box-shadow:
-                0 10px 25px
-                rgba(56, 189, 248, 0.25);
+            background: #106746;
+            transform: translateY(-2px);
         }
 
         .secondary {
-            border: 1px solid #334155;
-
-            color: #e2e8f0;
+            border: 2px solid #16865b;
+            color: #16865b;
         }
 
         .secondary:hover {
-            border-color: #38bdf8;
-
-            color: #38bdf8;
-
-            transform: translateY(-3px);
+            background: #16865b;
+            color: white;
         }
 
-
-        /* =========================
-           SECTIONS
-        ========================= */
-
+        /* SECTIONS */
         section {
-            max-width: 1100px;
-
-            margin: auto;
-
-            padding: 90px 25px;
+            padding: 80px 8%;
         }
 
         .section-title {
             text-align: center;
-
-            font-size: 36px;
-
-            margin-bottom: 15px;
-
-            color: #f8fafc;
-        }
-
-        .section-title span {
-            color: #38bdf8;
-        }
-
-        .section-subtitle {
-            text-align: center;
-
-            color: #94a3b8;
-
             margin-bottom: 45px;
         }
 
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about-box {
-            background: #111827;
-
-            border: 1px solid #1f2937;
-
-            border-radius: 15px;
-
-            padding: 35px;
-
-            text-align: center;
-
-            transition: 0.3s;
-        }
-
-        .about-box:hover {
-            border-color: #38bdf8;
-        }
-
-        .about-box p {
-            color: #cbd5e1;
-
-            font-size: 17px;
-        }
-
-
-        /* =========================
-           SKILLS
-        ========================= */
-
-        .skills-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(auto-fit, minmax(200px, 1fr));
-
-            gap: 20px;
-        }
-
-        .skill-card {
-            background: #111827;
-
-            border: 1px solid #1f2937;
-
-            border-radius: 12px;
-
-            padding: 25px;
-
-            text-align: center;
-
-            transition: 0.3s;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-7px);
-
-            border-color: #38bdf8;
-
-            box-shadow:
-                0 10px 25px
-                rgba(0, 0, 0, 0.2);
-        }
-
-        .skill-card h3 {
-            color: #38bdf8;
-
+        .section-title h2 {
+            font-size: 36px;
             margin-bottom: 10px;
         }
 
-        .skill-card p {
-            color: #94a3b8;
+        .section-title p {
+            color: #6a8177;
         }
 
+        /* ABOUT */
+        .about {
+            background: white;
+        }
 
-        /* =========================
-           PROJECTS
-        ========================= */
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+            color: #526b60;
+        }
 
-        .projects-grid {
+        /* SKILLS */
+        .skills-container {
+            max-width: 1000px;
+            margin: auto;
             display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+        }
 
-            grid-template-columns:
-                repeat(auto-fit, minmax(280px, 1fr));
+        .skill {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            border: 1px solid #dceee4;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
+        .skill:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        /* PROJECTS */
+        .projects {
+            background: white;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
 
         .project-card {
-            background: #111827;
-
-            border: 1px solid #1f2937;
-
-            border-radius: 15px;
-
+            background: #f7fdf9;
             padding: 28px;
-
+            border-radius: 14px;
+            border: 1px solid #dceee4;
             transition: 0.3s;
-
-            display: flex;
-
-            flex-direction: column;
         }
 
         .project-card:hover {
-            transform: translateY(-8px);
-
-            border-color: #38bdf8;
-
-            box-shadow:
-                0 15px 35px
-                rgba(0, 0, 0, 0.25);
+            transform: translateY(-7px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
         }
 
         .project-card h3 {
-            color: #f8fafc;
-
             margin-bottom: 12px;
-
-            font-size: 21px;
+            color: #16865b;
         }
 
         .project-card p {
-            color: #94a3b8;
-
+            color: #61766c;
             margin-bottom: 20px;
-
-            flex-grow: 1;
-        }
-
-
-        /* PROJECT TAGS */
-
-        .tags {
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 8px;
-
-            margin-bottom: 20px;
-        }
-
-        .tag {
-            background: #172033;
-
-            color: #38bdf8;
-
-            padding: 5px 10px;
-
-            border-radius: 20px;
-
-            font-size: 13px;
         }
 
         .project-link {
-            color: #38bdf8;
-
+            text-decoration: none;
+            color: #16865b;
             font-weight: bold;
         }
 
-        .project-link:hover {
-            text-decoration: underline;
-        }
-
-
-        /* =========================
-           CONTACT
-        ========================= */
-
+        /* CONTACT */
         .contact-box {
-            background: #111827;
-
-            border: 1px solid #1f2937;
-
-            border-radius: 15px;
-
-            padding: 45px 25px;
-
+            max-width: 750px;
+            margin: auto;
             text-align: center;
-
-            transition: 0.3s;
-        }
-
-        .contact-box:hover {
-            border-color: #38bdf8;
-        }
-
-        .contact-box h3 {
-            font-size: 28px;
-
-            color: #f8fafc;
-
-            margin-bottom: 12px;
+            background: white;
+            padding: 45px;
+            border-radius: 15px;
+            border: 1px solid #dceee4;
         }
 
         .contact-box p {
-            color: #94a3b8;
-
+            color: #60776c;
             margin-bottom: 25px;
         }
 
         .contact-links {
             display: flex;
-
             justify-content: center;
-
             gap: 15px;
-
             flex-wrap: wrap;
         }
 
-
-        /* =========================
-           FOOTER
-        ========================= */
-
+        /* FOOTER */
         footer {
-            border-top: 1px solid #1f2937;
-
+            background: #18352a;
+            color: white;
             text-align: center;
-
             padding: 25px;
-
-            color: #64748b;
         }
 
+        footer span {
+            color: #65c89a;
+        }
 
-        /* =========================
-           RESPONSIVE
-        ========================= */
-
+        /* MOBILE */
         @media (max-width: 700px) {
 
-            .nav-container {
+            nav {
                 flex-direction: column;
-
-                gap: 12px;
+                gap: 15px;
             }
 
-            .nav-links {
+            nav ul {
                 gap: 15px;
-
-                font-size: 14px;
-
                 flex-wrap: wrap;
-
                 justify-content: center;
             }
 
@@ -486,156 +277,84 @@
             }
 
             .hero h2 {
-                font-size: 21px;
+                font-size: 22px;
             }
 
-            .section-title {
-                font-size: 30px;
+            section {
+                padding: 60px 6%;
             }
-
         }
-
     </style>
-
 </head>
-
 
 <body>
 
-
-    <!-- =========================
-         NAVBAR
-    ========================= -->
-
+    <!-- NAVIGATION -->
     <nav>
+        <div class="logo">Simran Gohel</div>
 
-        <div class="nav-container">
-
-            <div class="logo">
-                Simran.
-            </div>
-
-            <ul class="nav-links">
-
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-
-            </ul>
-
-        </div>
-
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
 
-
-    <!-- =========================
-         HOME
-    ========================= -->
-
-    <header class="hero" id="home">
+    <!-- HOME -->
+    <section class="hero" id="home">
 
         <div class="hero-content">
 
-            <h1>
-                Hi, I'm
-                <span>Simran Gohel</span>
-            </h1>
+            <h1>Hello, I'm <span>Simran</span> 👋</h1>
 
-            <h2>
-                Data & Technology Enthusiast
-            </h2>
+            <h2>Data & AI/ML Enthusiast</h2>
 
             <p>
-                I build practical projects using Python, SQL,
-                Excel and data analytics while continuously
-                improving my technical and problem-solving skills.
+                I am building my skills in Data Science, Artificial Intelligence,
+                Machine Learning, Python, SQL and Excel through practical projects.
             </p>
 
             <div class="buttons">
 
-                <a
-                    href="#projects"
-                    class="btn primary">
-
+                <a href="#projects" class="btn primary">
                     View My Projects
-
                 </a>
 
-                <a
-                    href="https://github.com/simrangohel70-lab"
-                    target="_blank"
-                    class="btn secondary">
-
-                    GitHub Profile
-
+                <a href="mailto:simrangohel70@gmail.com" class="btn secondary">
+                    Send Me an Email
                 </a>
 
             </div>
 
         </div>
 
-    </header>
+    </section>
 
 
+    <!-- ABOUT -->
+    <section class="about" id="about">
 
-    <!-- =========================
-         ABOUT
-    ========================= -->
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>Learning • Building • Improving</p>
+        </div>
 
-    <section id="about">
-
-        <h2 class="section-title">
-
-            About
-            <span>Me</span>
-
-        </h2>
-
-        <p class="section-subtitle">
-
-            Turning data and ideas into practical solutions.
-
-        </p>
-
-        <div class="about-box">
+        <div class="about-content">
 
             <p>
-
-                I'm a technology learner with a strong interest
-                in <strong>Data Analytics, SQL, Python and Excel</strong>.
-                I enjoy working with data, solving problems and
-                building practical projects that turn concepts
-                into useful solutions.
-
+                I am a BCA student and an aspiring Data & AI/ML professional.
+                I enjoy working with data, solving problems and creating
+                practical projects that help me strengthen my technical skills.
             </p>
 
             <br>
 
             <p>
-
-                My projects include database management systems,
-                Excel analytics, retail data analysis and
-                Python-based data projects. I am continuously
-                learning new technologies and improving my
-                technical and problem-solving skills.
-
+                My current learning journey includes Python, SQL, PostgreSQL,
+                Excel, Data Analysis, Machine Learning and Artificial Intelligence.
             </p>
 
         </div>
@@ -643,359 +362,172 @@
     </section>
 
 
-
-    <!-- =========================
-         SKILLS
-    ========================= -->
-
+    <!-- SKILLS -->
     <section id="skills">
 
-        <h2 class="section-title">
+        <div class="section-title">
+            <h2>My Skills</h2>
+            <p>Technologies and tools I am learning</p>
+        </div>
 
-            My
-            <span>Skills</span>
+        <div class="skills-container">
 
-        </h2>
-
-        <p class="section-subtitle">
-
-            Technologies and tools I'm working with.
-
-        </p>
-
-        <div class="skills-grid">
-
-
-            <div class="skill-card">
-
-                <h3>🐍 Python</h3>
-
-                <p>
-                    Programming, OOP, Pandas
-                    and Data Handling
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <h3>🗄️ SQL</h3>
-
-                <p>
-                    PostgreSQL, Queries,
-                    Joins and Databases
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <h3>📊 Excel</h3>
-
-                <p>
-                    Functions, Lookups,
-                    Data Analysis and Dashboards
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <h3>📈 Data Analytics</h3>
-
-                <p>
-                    Data Cleaning, Analysis
-                    and Visualization
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <h3>🌐 HTML & CSS</h3>
-
-                <p>
-                    Responsive and modern
-                    web development
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <h3>💻 Git & GitHub</h3>
-
-                <p>
-                    Version control and
-                    project management
-                </p>
-
-            </div>
-
+            <div class="skill">🐍 Python</div>
+            <div class="skill">🗄️ SQL</div>
+            <div class="skill">🐘 PostgreSQL</div>
+            <div class="skill">📊 Excel</div>
+            <div class="skill">📈 Data Analysis</div>
+            <div class="skill">🤖 Machine Learning</div>
+            <div class="skill">🧠 Artificial Intelligence</div>
+            <div class="skill">💻 HTML & CSS</div>
+            <div class="skill">📂 Git & GitHub</div>
 
         </div>
 
     </section>
 
 
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
 
-    <!-- =========================
-         PROJECTS
-    ========================= -->
+        <div class="section-title">
 
-    <section id="projects">
+            <h2>My Projects</h2>
 
-        <h2 class="section-title">
+            <p>
+                A collection of my practical projects
+            </p>
 
-            Featured
-            <span>Projects</span>
+        </div>
 
-        </h2>
 
-        <p class="section-subtitle">
-
-            A collection of my practical projects
-            in data, databases, Excel and analytics.
-
-        </p>
-
-        <div class="projects-grid">
+        <div class="project-grid">
 
 
             <!-- PROJECT 1 -->
 
             <div class="project-card">
 
-                <h3>
-                    🔎 Data Digger
-                </h3>
+                <h3>🔎 Data Digger</h3>
 
                 <p>
-
-                    A practical data project focused on exploring,
-                    transforming and analyzing structured data
-                    using SQL and database concepts.
-
+                    A PostgreSQL-based data management project demonstrating
+                    database design, SQL queries, joins, constraints and
+                    data analysis.
                 </p>
-
-                <div class="tags">
-
-                    <span class="tag">SQL</span>
-
-                    <span class="tag">PostgreSQL</span>
-
-                    <span class="tag">Data Analysis</span>
-
-                </div>
 
                 <a
                     href="https://github.com/simrangohel70-lab/Data-Digger"
                     target="_blank"
                     class="project-link">
-
-                    View Project →
-
+                    View on GitHub →
                 </a>
 
             </div>
-
 
 
             <!-- PROJECT 2 -->
 
             <div class="project-card">
 
-                <h3>
-                    📊 Fundamental Booster — Excel
-                </h3>
+                <h3>📊 Fundamental Booster Excel</h3>
 
                 <p>
-
-                    A hands-on Excel project covering formulas,
-                    functions, conditional formatting, lookups,
-                    data analysis and spreadsheet techniques.
-
+                    An Excel learning project covering formulas, lookup
+                    functions, data analysis, conditional formatting and
+                    practical spreadsheet techniques.
                 </p>
-
-                <div class="tags">
-
-                    <span class="tag">Excel</span>
-
-                    <span class="tag">Data Analysis</span>
-
-                    <span class="tag">Functions</span>
-
-                </div>
 
                 <a
                     href="https://github.com/simrangohel70-lab/Fundamental-Booster-excel"
                     target="_blank"
                     class="project-link">
-
-                    View Project →
-
+                    View on GitHub →
                 </a>
 
             </div>
-
 
 
             <!-- PROJECT 3 -->
 
             <div class="project-card">
 
-                <h3>
-                    📚 Library Management System
-                </h3>
+                <h3>📚 Library Management System</h3>
 
                 <p>
-
-                    A database management system designed to
-                    organize authors, books and library records
-                    using relational database concepts.
-
+                    A database project designed to manage authors,
+                    books and library-related information using SQL.
                 </p>
-
-                <div class="tags">
-
-                    <span class="tag">PostgreSQL</span>
-
-                    <span class="tag">SQL</span>
-
-                    <span class="tag">Database</span>
-
-                </div>
 
                 <a
                     href="https://github.com/simrangohel70-lab/library-management-system"
                     target="_blank"
                     class="project-link">
-
-                    View Project →
-
+                    View on GitHub →
                 </a>
 
             </div>
-
 
 
             <!-- PROJECT 4 -->
 
             <div class="project-card">
 
-                <h3>
-                    🛒 Retail Sale Data Analyzer
-                </h3>
+                <h3>🛒 Retail Sale Data Analyzer</h3>
 
                 <p>
-
-                    A data analysis project focused on examining
-                    retail sales data and extracting useful
-                    insights through practical data analysis
-                    techniques.
-
+                    A data analysis project focused on exploring retail
+                    sales information and generating useful insights
+                    from business data.
                 </p>
-
-                <div class="tags">
-
-                    <span class="tag">Data Analysis</span>
-
-                    <span class="tag">SQL</span>
-
-                    <span class="tag">Analytics</span>
-
-                </div>
 
                 <a
                     href="https://github.com/simrangohel70-lab/Retail-sale-data-analyzer"
                     target="_blank"
                     class="project-link">
-
-                    View Project →
-
+                    View on GitHub →
                 </a>
 
             </div>
-
 
 
             <!-- PROJECT 5 -->
 
             <div class="project-card">
 
-                <h3>
-                    🚢 Titanic Survival Analysis
-                </h3>
+                <h3>🚢 Titanic Survival Analysis</h3>
 
                 <p>
-
-                    A data analysis project using the Titanic
-                    dataset to explore passenger information,
-                    survival patterns and meaningful insights.
-
+                    A data analysis project exploring the Titanic dataset
+                    using Python, Pandas and data visualization techniques.
                 </p>
-
-                <div class="tags">
-
-                    <span class="tag">Python</span>
-
-                    <span class="tag">Pandas</span>
-
-                    <span class="tag">Data Visualization</span>
-
-                </div>
 
                 <a
                     href="https://github.com/simrangohel70-lab/Titanic-survival-"
                     target="_blank"
                     class="project-link">
-
-                    View Project →
-
+                    View on GitHub →
                 </a>
 
             </div>
-
 
 
             <!-- PROJECT 6 -->
 
             <div class="project-card">
 
-                <h3>
-                    🎓 University Course Management System
-                </h3>
+                <h3>🎓 University Course Management System</h3>
 
                 <p>
-
-                    A relational database project for managing
-                    university courses, students and academic
-                    records using structured SQL concepts.
-
+                    A SQL database project for managing university courses,
+                    students, enrollments and related academic information.
                 </p>
-
-                <div class="tags">
-
-                    <span class="tag">PostgreSQL</span>
-
-                    <span class="tag">SQL</span>
-
-                    <span class="tag">Database</span>
-
-                </div>
 
                 <a
                     href="https://github.com/simrangohel70-lab/University-Course-Management-System"
                     target="_blank"
                     class="project-link">
-
-                    View Project →
-
+                    View on GitHub →
                 </a>
 
             </div>
@@ -1006,57 +538,40 @@
     </section>
 
 
-
-    <!-- =========================
-         CONTACT
-    ========================= -->
-
+    <!-- CONTACT -->
     <section id="contact">
 
-        <h2 class="section-title">
+        <div class="section-title">
 
-            Get In
-            <span>Touch</span>
+            <h2>Let's Connect</h2>
 
-        </h2>
+            <p>
+                Have a project, question, or opportunity?
+                I'd love to hear from you.
+            </p>
 
-        <p class="section-subtitle">
+        </div>
 
-            Let's connect and explore opportunities together.
-
-        </p>
 
         <div class="contact-box">
 
-            <h3>
-                Let's Connect 🤝
-            </h3>
-
             <p>
-
-                Want to explore my work?
-                Visit my GitHub profile and check out
-                my latest projects.
-
+                📧 Email me directly or explore my projects on GitHub.
             </p>
 
             <div class="contact-links">
 
                 <a
-                    href="https://github.com/simrangohel70-lab"
-                    target="_blank"
+                    href="mailto:simrangohel70@gmail.com"
                     class="btn primary">
-
-                    GitHub Profile →
-
+                    📧 Send Me an Email
                 </a>
 
                 <a
-                    href="#home"
+                    href="https://github.com/simrangohel70-lab"
+                    target="_blank"
                     class="btn secondary">
-
-                    Back to Top ↑
-
+                    💻 GitHub
                 </a>
 
             </div>
@@ -1066,24 +581,15 @@
     </section>
 
 
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
+    <!-- FOOTER -->
     <footer>
 
         <p>
-
-            © 2026 Simran Gohel.
-            Built with HTML & CSS.
-
+            © 2026 <span>Simran Gohel</span> | Built with HTML & CSS
         </p>
 
     </footer>
 
 
 </body>
-
 </html>
-```
